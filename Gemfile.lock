@@ -1,3 +1,14 @@
+GIT
+  remote: https://github.com/randym/axlsx
+  revision: c593a08b2a929dac7aa8dc418b55e26b4c49dc34
+  branch: master
+  specs:
+    axlsx (3.0.0.pre)
+      htmlentities (~> 4.3, >= 4.3.4)
+      mimemagic (~> 0.3)
+      nokogiri (~> 1.8, >= 1.8.2)
+      rubyzip (~> 1.2, >= 1.2.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -39,10 +50,6 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (8.0.0)
-    axlsx (2.0.1)
-      htmlentities (~> 4.3.1)
-      nokogiri (>= 1.4.1)
-      rubyzip (~> 1.0.0)
     axlsx_rails (0.5.2)
       actionpack (>= 3.1)
       axlsx (>= 2.0.1)
@@ -69,6 +76,7 @@ GEM
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     method_source (0.9.2)
+    mimemagic (0.3.3)
     mini_mime (1.0.1)
     mini_portile2 (2.4.0)
     minitest (5.11.3)
@@ -115,7 +123,7 @@ GEM
       spreadsheet (> 0.6.4)
     ruby-ole (1.2.12.2)
     ruby_dep (1.5.0)
-    rubyzip (1.0.0)
+    rubyzip (1.2.2)
     simple_command (0.0.9)
     spreadsheet (1.2.3)
       ruby-ole (>= 1.0)
@@ -144,7 +152,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  axlsx (= 2.0.1)
+  axlsx!
   axlsx_rails
   bcrypt
   jwt
@@ -153,7 +161,7 @@ DEPENDENCIES
   puma (~> 3.7)
   rails (~> 5.1.7)
   roo
-  rubyzip (= 1.0.0)
+  rubyzip (~> 1.2.2)
   simple_command
   spring
   spring-watcher-listen (~> 2.0.0)
