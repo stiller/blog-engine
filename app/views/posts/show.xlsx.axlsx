@@ -1,0 +1,19 @@
+wb = xlsx_package.workbook
+
+wb.add_worksheet(name: "Post") do |sheet|
+  # this is the head row of your spreadsheet
+  sheet.add_row %w(body)
+
+  # each user is a row on your spreadsheet
+  sheet.add_row [@post.body]
+end
+
+wb.add_worksheet(name: "Comments") do |sheet|
+  # this is the head row of your spreadsheet
+  sheet.add_row %w(user body)
+
+  # each user is a row on your spreadsheet
+  @post.comments.each do |comment|
+    sheet.add_row [comment.user.email, comment.body]
+  end
+end

@@ -39,6 +39,13 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (8.0.0)
+    axlsx (2.0.1)
+      htmlentities (~> 4.3.1)
+      nokogiri (>= 1.4.1)
+      rubyzip (~> 1.0.0)
+    axlsx_rails (0.5.2)
+      actionpack (>= 3.1)
+      axlsx (>= 2.0.1)
     bcrypt (3.1.12)
     builder (3.2.3)
     coderay (1.1.2)
@@ -48,6 +55,7 @@ GEM
     ffi (1.10.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    htmlentities (4.3.4)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     jwt (1.5.6)
@@ -101,8 +109,16 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    roo (1.13.2)
+      nokogiri
+      rubyzip
+      spreadsheet (> 0.6.4)
+    ruby-ole (1.2.12.2)
     ruby_dep (1.5.0)
+    rubyzip (1.0.0)
     simple_command (0.0.9)
+    spreadsheet (1.2.3)
+      ruby-ole (>= 1.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -128,12 +144,16 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  axlsx (= 2.0.1)
+  axlsx_rails
   bcrypt
   jwt
   listen (>= 3.0.5, < 3.2)
   pry
   puma (~> 3.7)
   rails (~> 5.1.7)
+  roo
+  rubyzip (= 1.0.0)
   simple_command
   spring
   spring-watcher-listen (~> 2.0.0)

@@ -9,9 +9,12 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = current_user.posts.find(params[:id])
+    @post = Post.find(params[:id])
 
-    render json: @post
+    respond_to do |format|
+      format.json { render json: @post.to_json }
+      format.xlsx
+    end
   end
 
   private
